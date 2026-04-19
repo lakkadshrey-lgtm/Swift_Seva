@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftSeva | Fast & Reliable Home Services</title>
+    <meta name="description" content="Book professional home cleaning, plumbers, electricians, and more. SwiftSeva: Book Karo. Chill Karo.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">SwiftSeva</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content animate-fade">
+                <h1>Fast & Reliable Services <br>at Your Doorstep</h1>
+                <p>Book professional services in seconds. <br><strong>Book Karo. Chill Karo.</strong></p>
+                <a href="#booking" class="btn-primary">Book Now</a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i data-lucide="zap" class="feature-icon"></i>
+                    <h3>Quick & Efficient</h3>
+                    <p>Same-day service with verified professionals who value your time.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="indian-rupee" class="feature-icon"></i>
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent pricing with no hidden costs. Quality service at fair rates.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="shield-check" class="feature-icon"></i>
+                    <h3>Trusted Pros</h3>
+                    <p>Background-checked and highly rated professionals for your peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="map-pin" class="feature-icon"></i>
+                    <h3>Service Anywhere</h3>
+                    <p>Proudly serving multiple regions with local experts who know your needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <!-- Home Cleaning -->
+                <div class="service-card">
+                    <img src="assets/cleaning.png" alt="Home Cleaning" class="service-img">
+                    <div class="service-content">
+                        <h3>Home Cleaning</h3>
+                        <p>Deep cleaning for a sparkling home. Kitchen, bathrooms, and more.</p>
+                        <a href="#booking" class="service-btn" onclick="setService('Home Cleaning')">Book Now</a>
+                    </div>
+                </div>
+                <!-- Electrician -->
+                <div class="service-card">
+                    <img src="assets/electrician.png" alt="Electrician" class="service-img">
+                    <div class="service-content">
+                        <h3>Electrician</h3>
+                        <p>Fix wiring, switches, or install new appliances safely.</p>
+                        <a href="#booking" class="service-btn" onclick="setService('Electrician')">Book Now</a>
+                    </div>
+                </div>
+                <!-- Plumbing -->
+                <div class="service-card">
+                    <img src="assets/plumbing.png" alt="Plumbing" class="service-img">
+                    <div class="service-content">
+                        <h3>Plumbing</h3>
+                        <p>Leaky taps or pipe repairs—our plumbers fix it all fast.</p>
+                        <a href="#booking" class="service-btn" onclick="setService('Plumbing')">Book Now</a>
+                    </div>
+                </div>
+                <!-- AC Repair -->
+                <div class="service-card">
+                    <img src="assets/ac-repair.png" alt="AC Repair" class="service-img">
+                    <div class="service-content">
+                        <h3>AC Repair</h3>
+                        <p>Stay cool with expert AC servicing and gas refills.</p>
+                        <a href="#booking" class="service-btn" onclick="setService('AC Repair')">Book Now</a>
+                    </div>
+                </div>
+                <!-- Delivery Services -->
+                <div class="service-card">
+                    <img src="assets/delivery.png" alt="Delivery Services" class="service-img">
+                    <div class="service-content">
+                        <h3>Delivery Services</h3>
+                        <p>Need something moved? Fast and secure local delivery.</p>
+                        <a href="#booking" class="service-btn" onclick="setService('Delivery')">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="booking">
+            <h2 class="section-title">Book a Service</h2>
+            <div class="booking-section">
+                <form id="booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" required>
+                            <option value="">Choose a service...</option>
+                            <option value="Home Cleaning">Home Cleaning</option>
+                            <option value="Electrician">Electrician</option>
+                            <option value="Plumbing">Plumbing</option>
+                            <option value="AC Repair">AC Repair</option>
+                            <option value="Delivery">Delivery Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="datetime">Select Date & Time</label>
+                        <input type="datetime-local" id="datetime" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Confirm Booking</button>
+                    <p id="form-message" style="display:none; text-align:center; margin-top:1rem; color:green; font-weight:600;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 class="logo">SwiftSeva</h4>
+                <p>Bringing reliable home services to your doorstep with just a few clicks.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><i data-lucide="help-circle"></i> Help Center</li>
+                    <li><i data-lucide="message-square"></i> Live Chat</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <i data-lucide="facebook"></i>
+                    <i data-lucide="twitter"></i>
+                    <i data-lucide="instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SwiftSeva. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
